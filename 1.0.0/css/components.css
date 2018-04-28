@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*普通2倍图100px页面TIPS提示 BY xiaoxin*/
+/*loading遮罩*/
+.windowMask { width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; opacity: 1; background-color: rgba(0, 0, 0, 0.5); -webkit-transition-property: opacity; transition-property: opacity; -webkit-transition-duration: 300ms; transition-duration: 300ms; -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+.windowMask .loading-icon { display: block; width: 0.2rem; height: 0.2rem; background-image: url("//img30.360buyimg.com/jr_image/jfs/t14377/39/2055499811/1317/b5c61223/5a6af012Nee8c1742.png"); background-size: cover; position: absolute; top: 50%; margin-top: -0.1rem; left: 50%; margin-left: -0.1rem; -webkit-animation: rotateRun 0.7s infinite linear; }
+.windowMask .df-loading { display: block; width: 1.1rem; height: 1.1rem; background-image: url("//img30.360buyimg.com/jr_image/jfs/t18208/262/2004182659/4512/8d70010e/5ade98bfN1e808a65.gif"); background-size: cover; position: absolute; top: 50%; margin-top: -0.55rem; left: 50%; margin-left: -0.55rem; z-index: -1; }
+
+@-webkit-keyframes rotateRun { 0% { -webkit-transform: rotate(0deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes jm-fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@-moz-keyframes jm-fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@-ms-keyframes jm-fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@keyframes jm-fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@-webkit-keyframes jm-fadeOut { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@-moz-keyframes jm-fadeOut { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@-ms-keyframes jm-fadeOut { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@keyframes jm-fadeOut { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+.jm-jdloading { z-index: 10000; opacity: 1; -webkit-animation: jm-fadeIn .3s ease-out; -moz-animation: jm-fadeIn .3s ease-out; -ms-animation: jm-fadeIn .3s ease-out; animation: jm-fadeIn .3s ease-out; -webkit-transition: all .3s ease-out; -moz-transition: all .3s ease-out; -ms-transition: all .3s ease-out; transition: all 0.3s ease-out; }
+
+.jm-jdloading.jjl-mask { background-color: rgba(0, 0, 0, 0.5); }
+
+.fadeOut { opacity: 0; -webkit-animation: jm-fadeOut .3s ease-out; -moz-animation: jm-fadeOut .3s ease-out; -ms-animation: jm-fadeOut .3s ease-out; animation: jm-fadeOut .3s ease-out; }
+
+.black-tips { position: fixed; top: 45%; left: 0; width: 100%; text-align: center; z-index: 1001; }
+.black-tips .mask-box { padding: 0.125rem 0.175rem; max-width: 80%; border-radius: 0.05rem; background-color: rgba(0, 0, 0, 0.7); display: inline-block; }
+.black-tips .mask-box p { color: #fff; font-size: 0.16rem; }
+
+.animated { -webkit-animation-duration: 0.5s; animation-duration: 0.5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }

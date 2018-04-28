@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import "cells/_css3lib";
+/**============================
+loading Rotate
+==============================*/
+@include keyframes(rotate, webkit moz ms spec) {
+    0% { @include transform(rotate(0deg)); }
+    100% { @include transform(rotate(360deg)); }
+}
+/**============================
+fade
+==============================*/
+@include keyframes(fadeOut, webkit moz ms spec) {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@include keyframes(fadeIn, webkit moz ms spec) {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/**============================
+slider
+==============================*/
+$dis: 1.5rem;
+@include keyframes(slideLeft, webkit moz ms spec) {
+    0% { opacity: 0; @include transform(translate($dis, 0)); }
+    100% { opacity: 1; @include transform(translate(0%, 0)); }
+}
+@include keyframes(slideRight, webkit moz ms spec) {
+    0% { opacity: 0; @include transform(translate(-$dis, 0)); }
+    100% { opacity: 1; @include transform(translate(0%, 0)); }
+}
